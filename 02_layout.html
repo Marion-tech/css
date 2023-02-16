@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background-color: teal;
+      min-height: 50px;
+    }
+
+    .body {
+      background-color: green;
+      flex: 1;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+    }
+    .sidebar {
+      background-color: red;
+      flex: 0 0 200px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+    li {
+      flex: 1;
+      background-color: blueviolet;
+      height: 20px;
+      margin: 0.5rem;
+      flex-basis: 50px;
+    }
+    .content {
+      flex: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: orange;
+    }
+    .content div {
+      background-color: blue;
+      flex-basis: 200px;
+      height: 200px;
+      margin: 1rem;
+      justify-content: flex-start;
+      align-content: flex-start;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <header></header>
+      <div class="body">
+        <div class="sidebar">
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </div>
+
+        <div class="content">
+          <div>elem-1</div>
+          <div>elem-2</div>
+          <div>elem-3</div>
+          <div>elem-4</div>
+          <div>elem-5</div>
+          <div>elem-6</div>
+          <div>elem-7</div>
+          <div>elem-8</div>
+          <div>elem-9</div>
+          <div>elem-10</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
